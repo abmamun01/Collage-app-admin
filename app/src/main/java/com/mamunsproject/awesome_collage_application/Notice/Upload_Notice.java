@@ -64,10 +64,13 @@ public class Upload_Notice extends AppCompatActivity {
 
         init();
         clickListener();
+
+
     }
 
 
     public void init() {
+
         addImage = findViewById(R.id.add_Image);
         noticeImageView = findViewById(R.id.noticeImageView);
         noticeTitle = findViewById(R.id.notice_title);
@@ -200,7 +203,7 @@ public class Upload_Notice extends AppCompatActivity {
                 pDialog.dismissWithAnimation();
                 Toast.makeText(getApplicationContext(),"Something went wrong!",Toast.LENGTH_SHORT).show();
 
-                Log.d("TAG", "onFailure: ");
+                Log.d("upload", "onFailure: "+e.getLocalizedMessage());
 
             }
         });

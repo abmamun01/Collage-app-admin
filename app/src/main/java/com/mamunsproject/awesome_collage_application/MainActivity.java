@@ -6,6 +6,7 @@ import androidx.cardview.widget.CardView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import androidx.appcompat.widget.Toolbar;
 
 import com.mamunsproject.awesome_collage_application.Faculty.Update_Faculty;
 import com.mamunsproject.awesome_collage_application.Notice.Delete_Notice_Activite;
@@ -14,14 +15,17 @@ import com.mamunsproject.awesome_collage_application.Notice.Upload_Notice;
 public class MainActivity extends AppCompatActivity  {
 
     private CardView uploadnotice,add_Gallery_Image,uploadEbookCardView,faculti,delete_notice;
+    private Toolbar toolbar;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         init();
         clickListener();
+
 
     }
 
@@ -32,6 +36,12 @@ public class MainActivity extends AppCompatActivity  {
         uploadEbookCardView=findViewById(R.id.add_Ebook);
         faculti=findViewById(R.id.faculti);
         delete_notice=findViewById(R.id.delete_notice);
+        toolbar=findViewById(R.id.main_activity_toolbar_id);
+
+        toolbar.setTitle("Collage App");
+        toolbar.setTitleTextColor(getResources().getColor(R.color.black));
+        setSupportActionBar(toolbar);
+
 
 
     }
@@ -41,10 +51,14 @@ public class MainActivity extends AppCompatActivity  {
         uploadnotice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 startActivity(new Intent(getApplicationContext(), Upload_Notice.class));
 
             }
         });
+
+
+
 
 
         add_Gallery_Image.setOnClickListener(new View.OnClickListener() {

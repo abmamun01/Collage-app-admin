@@ -65,7 +65,7 @@ public class AddTeacher extends AppCompatActivity {
         init();
         clickListener();
 
-        String[] items=new String[]{"Select Category","Computer Science","Mechanical","Physics","Chemistry"};
+        String[] items=new String[]{"Select Category","Physics","Chemistry","Biology","Bangla","Commerce","ICT","Higher Math","English","History"};
         addTecherCategory.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item,items));
 
 

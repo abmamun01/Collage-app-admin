@@ -99,7 +99,7 @@ public class Update_Teacher extends AppCompatActivity {
 
         try {
 
-            Picasso.get().load(image).into(updateTeacherImage);
+            Picasso.get().load(image).rotate(-80).into(updateTeacherImage);
 
         } catch (Exception e) {
             e.printStackTrace();
